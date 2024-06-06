@@ -29,12 +29,28 @@ body {
 
 	/* Margem de todos os lados. */
 	margin: 3px;
+
+
+
+	  
+	footer{
+		background-color: black;
+		color: gray
+	}
+
+
+		font-family: "Tiny5", sans-serif;
+		font-weight: 400;
+		font-style: normal;
+
+	  
 }
 
 /* Formatação comum entre os elementos. */
 header, nav, main, aside, footer {
 	/* Cor do fundo. */
-	background: greenyellow;
+	background:  gray;
+	color:  orangered;
 	/* Exibição flexível.                          */
 	/* Torna o elemento um flex container          */
 	/* e os seus elementos internos em flex-itens. */
@@ -42,6 +58,7 @@ header, nav, main, aside, footer {
 
 	/* Margem externa de todos os lados. */
 	margin: 3px;
+
 }
 
 /* Seletores para formatação individual. */
@@ -67,7 +84,7 @@ header #logo {
 	flex: 0 1 200px;
 
 	/* Cor do fundo. */
-	background: darkgreen;
+	background: gray;
 
 	/* Alinha os itens na vertical. */
 	justify-content: center;
