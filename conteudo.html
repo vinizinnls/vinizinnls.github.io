@@ -22,11 +22,46 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
-	
+
 </head>
 
 <!-- Conteúdo apresentado na tela. -->
 <body>
+
+<div class="mySlides">
+	<img class="banner" src="inagems/f40.0.jpg">
+</div>
+<div class="mySlides">
+	<img class="banner" src="inagems/f40.1.jpg">
+</div>
+<div class="mySlides">
+	<img class="banner" src="inagems/f40.2.jpg">
+</div>
+<div class="mySlides">
+	<img class="banner" src="inagems/f40.3.jpg">
+</div>
+
+<script>
+	// Código JavaScript do carrossel automático de imagens
+	
+	var interval = 2000;
+	//medida em milissegundos (ex: 2000 milissegundos = 2 segundos)
+	
+	var myIndex = 0;
+	carousel();
+	
+	function carousel() {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		}
+		myIndex++;
+		if (myIndex > slides.length) {myIndex = 1}    
+		slides[myIndex-1].style.display = "block";  
+		setTimeout(carousel, interval);    
+	}
+</script>
 
 	<!-- Agrupa os elementos que compõe o cabeçalho. -->
 	<header>

@@ -28,6 +28,38 @@
 <!-- Conteúdo apresentado na tela. -->
 <body>
 
+	<div class="mySlides">
+		<img class="banner" src="inagems/foto👍.jpg">
+	</div>
+	<div class="mySlides">
+		<img class="banner" src="inagems/vinizinnlsobrabodaawp.jpg">
+	</div>
+	<div class="mySlides">
+		<img class="banner" src="inagems/baraulio.jpg">
+	</div>
+
+	<script>
+		// Código JavaScript do carrossel automático de imagens
+		
+		var interval = 2000;
+		//medida em milissegundos (ex: 2000 milissegundos = 2 segundos)
+		
+		var myIndex = 0;
+		carousel();
+		
+		function carousel() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			}
+			myIndex++;
+			if (myIndex > slides.length) {myIndex = 1}    
+			slides[myIndex-1].style.display = "block";  
+			setTimeout(carousel, interval);    
+		}
+	</script>
+
 	<!-- Agrupa os elementos que compõe o cabeçalho. -->
 	<header>
 		<a href="./layout.html" id="logo">Logo</a>
@@ -52,6 +84,7 @@
 		<h1>INTEGRANTES</h1>
 		
 	</main>
+
 
 	<!-- Agrupa informações e links relacionado ao conteúdo principal. -->
 	<aside>Aside</aside>
