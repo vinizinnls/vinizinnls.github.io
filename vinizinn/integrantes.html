@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        .mySlides img {
+            max-width: 40%; /* Define a largura máxima como 100% do container */
+            height: auto; /* Garante que a altura seja ajustada proporcionalmente */
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="assets/css/layout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="./layout.html" id="logo">Logo</a>
+        <button id="openMenu">&#9776;</button>
+    </header>
+    <nav id="menu">
+        <button id="closeMenu">X</button>
+        <a href="homepage.html">Home</a>
+        <a href="integrantes.html">Integrantes</a>
+        <a href="conteudo.html">Conteúdo</a>
+        <a href="referencias.html">Referências</a> <!-- Corrigido o typo aqui -->
+    </nav>
+    <main>
+        <h1>INTEGRANTES</h1>
+        <div class="mySlides">
+            <img class="banner" src="inagems/foto👍.jpg">
+        </div>
+        <div class="mySlides">
+            <img class="banner" src="inagems/vinizinnlsobrabodaawp.png">
+        </div>
+        <div class="mySlides">
+            <img class="banner" src="inagems/baraulio.png">
+        </div>
+        <script>
+            var interval = 2000;
+            var myIndex = 0;
+            carousel();
+            
+            function carousel() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > slides.length) {myIndex = 1}    
+                slides[myIndex-1].style.display = "block";  
+                setTimeout(carousel, interval);    
+            }
+        </script>
+    </main>
+    <aside>Aside</aside>
+    <footer>Footer</footer>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+</html>
