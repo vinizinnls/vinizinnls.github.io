@@ -1,100 +1,63 @@
-<!-- Indica que o documento é um arquivo HTML. -->
 <!DOCTYPE html>
-
-<!-- Define a linguagem do conteúdo da página. -->
 <html lang="pt-br">
-
-<!-- Armazena informações sobre a página. -->
 <head>
-
-	<!-- Conjunto de caracteres que contém acentuação e ç. -->
-	<meta charset="utf-8">
-
-	<!-- Configuração da janela de visualização ( responsividade ). -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<!-- Importação do arquivo CSS. -->
-	<link rel="stylesheet" type="text/css" href="assets/css/layout.css">
-
-	<!-- Título da aba do navegador -->
-	<title>Layout</title>
-
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        .mySlides img {
+            max-width: 40%; /* Define a largura máxima como 100% do container */
+            height: auto; /* Garante que a altura seja ajustada proporcionalmente */
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="assets/css/layout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
 </head>
-
-<!-- Conteúdo apresentado na tela. -->
 <body>
-
-	<div class="mySlides">
-		<img class="banner" src="inagems/foto👍.jpg">
-	</div>
-	<div class="mySlides">
-		<img class="banner" src="inagems/vinizinnlsobrabodaawp.jpg">
-	</div>
-	<div class="mySlides">
-		<img class="banner" src="inagems/baraulio.jpg">
-	</div>
-
-	<script>
-		// Código JavaScript do carrossel automático de imagens
-		
-		var interval = 2000;
-		//medida em milissegundos (ex: 2000 milissegundos = 2 segundos)
-		
-		var myIndex = 0;
-		carousel();
-		
-		function carousel() {
-			var i;
-			var slides = document.getElementsByClassName("mySlides");
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";  
-			}
-			myIndex++;
-			if (myIndex > slides.length) {myIndex = 1}    
-			slides[myIndex-1].style.display = "block";  
-			setTimeout(carousel, interval);    
-		}
-	</script>
-
-	<!-- Agrupa os elementos que compõe o cabeçalho. -->
-	<header>
-		<a href="./layout.html" id="logo">Logo</a>
-
-		<button id="openMenu">&#9776;</button>
-	</header>
-
-	<!-- Agrupa links de navegação no site. -->
-	<nav id="menu">
-
-		<button id="closeMenu">X</button>
-
-		<a href="index.html">Home</a>
-		<a href="integrantes.html">Integrantes</a>
-		<a href="conteudo.html">Conteúdo</a>
-		<a href="referencias.html">Refêrencias</a>
-	</nav>
-
-	<!-- Agrupa o conteúdo principal da página ou aplicação. -->
-	<main>Main
-
-		<h1>INTEGRANTES</h1>
-		
-	</main>
-
-
-	<!-- Agrupa informações e links relacionado ao conteúdo principal. -->
-	<aside>Aside</aside>
-
-	<!-- Agrupa informações de autoria, direitos autorais, contato, 
-		   mapa do site, links e documento relacionados. -->
-	<footer>Footer</footer>
-
-	<!-- Importação do arquivo JavaScript. -->
-	<script type="text/javascript" src="assets/js/script.js"></script>
-
-	
+    <header>
+        <a href="./layout.html" id="logo">Logo</a>
+        <button id="openMenu">&#9776;</button>
+    </header>
+    <nav id="menu">
+        <button id="closeMenu">X</button>
+        <a href="homepage.html">Home</a>
+        <a href="integrantes.html">Integrantes</a>
+        <a href="conteudo.html">Conteúdo</a>
+        <a href="referencias.html">Referências</a> <!-- Corrigido o typo aqui -->
+    </nav>
+    <main>
+        <h1>INTEGRANTES</h1>
+        <div class="mySlides">
+            <img class="banner" src="inagems/foto👍.jpg">
+        </div>
+        <div class="mySlides">
+            <img class="banner" src="inagems/vinizinnlsobrabodaawp.png">
+        </div>
+        <div class="mySlides">
+            <img class="banner" src="inagems/baraulio.png">
+        </div>
+        <script>
+            var interval = 2000;
+            var myIndex = 0;
+            carousel();
+            
+            function carousel() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > slides.length) {myIndex = 1}    
+                slides[myIndex-1].style.display = "block";  
+                setTimeout(carousel, interval);    
+            }
+        </script>
+    </main>
+    <aside>Aside</aside>
+    <footer>Footer</footer>
+    <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
+</html>
