@@ -213,7 +213,7 @@ a {
 		height: 100vh;
 
 		/* Cor em RGB, mais transparência. */
-		background: rgba(6, 240, 45, 0.651);
+		background: rgba(6, 240, 45, 1);
 
 		/* Alinha os itens na horizontal. */
 		align-items: center;
