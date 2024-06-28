@@ -52,7 +52,7 @@ body {
 /* Formatação comum entre os elementos. */
 header, nav, main, aside, footer {
 	/* Cor do fundo. */
-	background:  gray;
+	background:  whitesmoke;
 	color:  navy;
 	/* Exibição flexível.                          */
 	/* Torna o elemento um flex container          */
